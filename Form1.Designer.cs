@@ -116,7 +116,7 @@ namespace Chronomater
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGreen;
+            this.button1.BackColor = System.Drawing.Color.YellowGreen;
             this.button1.Location = new System.Drawing.Point(33, 73);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 29);
@@ -127,7 +127,7 @@ namespace Chronomater
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkRed;
+            this.button2.BackColor = System.Drawing.Color.IndianRed;
             this.button2.Location = new System.Drawing.Point(141, 73);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 29);
@@ -142,7 +142,7 @@ namespace Chronomater
             this.button3.Location = new System.Drawing.Point(249, 73);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(104, 29);
-            this.button3.TabIndex = 3;
+            this.button3.TabIndex = 2;
             this.button3.Text = "Restart";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -150,6 +150,7 @@ namespace Chronomater
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.Gray;
+            this.listView1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(37, 136);
@@ -197,9 +198,11 @@ namespace Chronomater
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "Chronomater";
             this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showToolStripMenuItem,
             this.hideToolStripMenuItem,
@@ -232,7 +235,7 @@ namespace Chronomater
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkBlue;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(387, 273);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button3);
@@ -248,11 +251,11 @@ namespace Chronomater
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chronomater";
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);

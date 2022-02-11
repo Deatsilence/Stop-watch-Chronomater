@@ -136,9 +136,15 @@ namespace Chronomater
             }
         }
 
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                this.WindowState = FormWindowState.Normal;
+        }
+
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Show();
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void hideToolStripMenuItem_Click(object sender, EventArgs e)
